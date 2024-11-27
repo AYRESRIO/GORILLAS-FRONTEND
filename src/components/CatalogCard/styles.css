@@ -1,0 +1,21 @@
+.gorillas-catalog-card-top {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .gorillas-catalog-card-top img {
+    width: 150px;
+    height: 150px;
+  }
+  .gorillas-catalog-card-bottom {
+    padding: 10px 40px;
+    min-height: 110px;
+  }
+  .gorillas-catalog-card-bottom h3 {
+    color: var(--gorillas-color-font-secondary);
+    font-size: 20px;
+  }
+  .gorillas-catalog-card-bottom h4 {
+    color: var(--gorillas-color-font-primary);
+    font-size: 17px;
+  }

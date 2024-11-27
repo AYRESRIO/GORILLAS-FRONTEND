@@ -1,0 +1,6 @@
+.gorillas-btn-white {
+  background-color: var(--gorillas-color-btn-inverse);
+  color: var(--gorillas-color-btn-primary);
+  border: 1px solid var(--gorillas-color-btn-primary);
+  cursor: pointer;
+}

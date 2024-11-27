@@ -1,0 +1,14 @@
+.gorillas-category {
+  background-color: var(--gorillas-color-bg-tertiary);
+  border-radius: 5px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gorillas-color-font-tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

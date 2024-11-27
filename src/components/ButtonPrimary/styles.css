@@ -1,0 +1,6 @@
+.gorillas-btn-blue {
+  border: none;
+  background-color: var(--gorillas-color-btn-primary);
+  color: var(--gorillas-color-btn-inverse);
+  cursor: pointer;
+}
