@@ -1,4 +1,7 @@
-import './styles.css';
-export default function ButtonInverse() {
-  return <div className="gorillas-btn gorillas-btn-white">Início</div>;
+import "./styles.css";
+type Props = {
+  text: string;
+};
+export default function ButtonInverse({ text }: Props) {
+  return <div className="gorillas-btn gorillas-btn-white">{text}</div>;
 }
