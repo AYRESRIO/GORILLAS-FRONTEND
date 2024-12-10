@@ -1,18 +1,24 @@
-import './styles.css';
+import "./styles.css";
 import cartIcon from "../../assets/cart.svg";
+import { Link } from "react-router-dom";
 export default function HeaderClient() {
   return (
     <>
       <header className="gorillas-header-client">
         <nav className="gorillas-container">
-          <h1>GORILLAS</h1>
+          <Link to="/">
+            <h1>GORILLAS</h1>
+          </Link>
+
           <div className="gorillas-navbar-right">
             <div className="gorillas-menu-items-container">
               <div className="gorillas-menu-item">
-                <img src={cartIcon} alt="Carrinho de compras" />
+                <Link to="/cart">
+                  <img src={cartIcon} alt="Carrinho de compras" />
+                </Link>
               </div>
             </div>
-            <a href="#">Entrar</a>
+            <Link to="/login">Entrar</Link>
           </div>
         </nav>
       </header>

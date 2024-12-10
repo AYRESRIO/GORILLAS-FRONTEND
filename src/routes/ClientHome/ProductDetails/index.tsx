@@ -2,44 +2,26 @@ import "./styles.css";
 import ButtonInverse from "../../../components/ButtonInverse";
 import ButtonPrimary from "../../../components/ButtonPrimary";
 import ProductDetailsCard from "../../../components/ProductDetailsCard";
-import { ProductDTO } from "../../../models/product";
-
-const product: ProductDTO = {
-  id: 2,
-  name: "Coxinhas de bacalhau",
-  description: "100 Coxinhas de bacalhau fritas",
-  imgUrl:
-    "https://ogimg.infoglobo.com.br/in/23272850-543-867/FT1086A/Toque-de-Chef.jpg",
-  price: 90.0,
-  categories: [
-    {
-      id: 2,
-      name: "Salgadinhos",
-    },
-    {
-      id: 3,
-      name: "Pizzas",
-    },
-    {
-      id: 4,
-      name: "Pastéis",
-    },
-    {
-      id: 5,
-      name: "Burgers",
-    },
-  ],
-};
+import * as productService from "../../../services/product-service";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function ProductDetails() {
+  const params = useParams();
+
+  const product = productService.findById(Number(params.productId));
   return (
     <main>
       <section id="product-details-section">
         <div className="gorillas-container">
-          <ProductDetailsCard product={product} />
+          {product && <ProductDetailsCard product={product} />}
+
           <div className="gorillas-btn-page-container gorillas-mb20">
             <ButtonPrimary text="Comprar" />
-            <ButtonInverse text="Início" />
+            <Link to = "/">
+              <ButtonInverse text="Início" />
+            </Link>
+            
           </div>
         </div>
       </section>
